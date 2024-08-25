@@ -1,18 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import UserComponent from './components/UserComponent';
+// Import other pages here
 
-const App: React.FC = () => {
+const AppRoutes: React.FC = () => {
     return (
         <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/users" element={<UserComponent />} />
-                {/* Add other routes */}
+                {/* Define routes for other pages */}
             </Routes>
         </Router>
     );
 };
 
-export default App;
+export default AppRoutes;
