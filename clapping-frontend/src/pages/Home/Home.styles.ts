@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
 export const HomeContainer = styled.div`
-    font-family: Arial, sans-serif;
+    top: 0px;
+left: -3px;
+width: 1924px;
+height: 1283px;
+/* UI Properties */
+background: transparent url('img/v960-ning-29.png') 0% 0% no-repeat padding-box;
+opacity: 1;
 `;
 
 export const Section = styled.section`

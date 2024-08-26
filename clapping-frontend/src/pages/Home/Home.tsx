@@ -1,7 +1,7 @@
 import React from 'react';
-
-import { HomeContainer, Section, Title, Subtitle, ClaimButton, Image, FAQSection, FAQItem } from './Home.styles';
 import Navbar from '../../components/Navbar/Navbar';
+import { ClaimButton, FAQItem, FAQSection, HomeContainer, Section, Subtitle, Title } from '../../components/HomeContainer';
+import ClaimLink from '../../components/ClaimLink/ClaimLink';
 
 const Home: React.FC = () => {
     return (
@@ -13,8 +13,9 @@ const Home: React.FC = () => {
                     Software professionals often struggle to prove their value beyond technical skills. 
                     Boost your career with instant peer recognition for your soft skills.
                 </Subtitle>
+                <ClaimLink />
                 <ClaimButton>Claim Your Brand Link</ClaimButton>
-                <Image src="/assets/images/your-image.png" alt="Profile" />
+                {/* <Image src="/assets/images/your-image.png" alt="Profile" /> */}
             </Section>
             {/* Add other sections similarly */}
             <FAQSection>
