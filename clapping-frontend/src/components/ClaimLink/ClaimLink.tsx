@@ -1,6 +1,15 @@
 import React from 'react';
 import { Box, Button, InputBase, styled } from '@mui/material';
 
+// Container for the entire section to center the content
+const CenterContainer = styled(Box)(({ theme }) => ({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+   // height: '100vh',
+    width: '100%',
+}));
+
 // Container for the input and button
 const ClaimLinkContainer = styled(Box)(({ theme }) => ({
     display: 'flex',
@@ -8,7 +17,7 @@ const ClaimLinkContainer = styled(Box)(({ theme }) => ({
     backgroundColor: '#FFFFFF',
     borderRadius: '50px',
     boxShadow: '0px 4px 15px rgba(255, 75, 92, 0.4)',
-    width: '400px', // Adjust the width as per your design
+    width: '600px', // Adjusted width for larger design
     overflow: 'hidden',
     [theme.breakpoints.down('sm')]: {
         width: '100%', // Responsive for smaller screens
@@ -17,10 +26,10 @@ const ClaimLinkContainer = styled(Box)(({ theme }) => ({
 
 // Styled Input
 const StyledInput = styled(InputBase)(({ theme }) => ({
-    padding: '10px 20px',
+    padding: '15px 25px', // Increased padding for larger design
     flex: 1,
-    fontSize: '16px',
-    color: '#A9A9A9', // Grey color as shown in the design
+    fontSize: '18px', // Increased font size
+    color: '#FF6D6C', // Grey color as shown in the design
     backgroundColor: 'transparent',
     border: 'none',
     outline: 'none',
@@ -30,10 +39,10 @@ const StyledInput = styled(InputBase)(({ theme }) => ({
 const ClaimButton = styled(Button)(({ theme }) => ({
     backgroundColor: '#FF4B5C',
     color: '#FFFFFF',
-    padding: '10px 20px',
+    padding: '15px 30px', // Increased padding for larger button
     borderRadius: '0 50px 50px 0',
     textTransform: 'none',
-    fontSize: '16px',
+    fontSize: '18px', // Increased font size
     '&:hover': {
         backgroundColor: '#E63946',
     },
@@ -41,10 +50,12 @@ const ClaimButton = styled(Button)(({ theme }) => ({
 
 const ClaimLink: React.FC = () => {
     return (
-        <ClaimLinkContainer>
-            <StyledInput placeholder="clapping.me/yourname" />
-            <ClaimButton>Claim Your Brand Link</ClaimButton>
-        </ClaimLinkContainer>
+        <CenterContainer>
+            <ClaimLinkContainer>
+                <StyledInput placeholder="clapping.me/yourname" />
+                <ClaimButton>Claim Your Brand Link</ClaimButton>
+            </ClaimLinkContainer>
+        </CenterContainer>
     );
 };
 

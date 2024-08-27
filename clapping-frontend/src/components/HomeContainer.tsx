@@ -8,89 +8,73 @@ export const HomeContainer = styled(Box)(({ theme }) => ({
     position: 'relative',
     width: '100%',
     minHeight: '100vh',
-    background: `transparent url('img/v960-ning-29.png') no-repeat center center/cover`,
+    background: `transparent url('/img/v960-ning-29.png') no-repeat center center/cover`,
     [theme.breakpoints.down('sm')]: {
         backgroundSize: 'contain',
         height: 'auto',
     },
 }));
 
-// Exporting other components if needed
 export const Section = styled(Box)(({ theme }) => ({
     padding: theme.spacing(6),
     textAlign: 'center',
-    backgroundColor: '#f0f4f8',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
     [theme.breakpoints.down('sm')]: {
         padding: theme.spacing(4),
     },
 }));
 
 export const Title = styled(Typography)(({ theme }) => ({
-    position: 'relative', // Assuming the 'top' and 'left' properties require relative positioning
-    top: '144px',
-    left: '200px',
-    width: '1645px',
-    height: '155px',
     color: '#0A2289',
     textAlign: 'center',
     fontFamily: 'Roboto, sans-serif',
     fontWeight: 900,
-    fontSize: '50px',
-    lineHeight: '60px',
+    fontSize: '3rem',
+    lineHeight: '1.2',
     letterSpacing: '0px',
-    opacity: 1,
+    marginBottom: theme.spacing(4),
     [theme.breakpoints.down('sm')]: {
-        fontSize: '40px', // Adjust the font size for small screens if needed
-        top: '100px', // Adjust positioning for small screens
-        left: '50px',
-        width: 'auto', // Make the width responsive
+        fontSize: '2rem',
+        marginBottom: theme.spacing(2),
     },
 }));
 
 export const Subtitle = styled(Typography)(({ theme }) => ({
-    position: 'relative', // Assuming the 'top' and 'left' properties require relative positioning
-    top: '303px',
-    left: '424px',
-    width: '1072px',
-    height: '74px',
     color: '#000000',
     textAlign: 'center',
-    fontFamily: 'Roboto, sans-serif',
+    fontFamily: 'normal normal 300 26px/40px Roboto',
     fontWeight: 300,
-    fontSize: '26px',
-    lineHeight: '40px',
+    fontSize: '1.5rem',
+    lineHeight: '1.5',
     letterSpacing: '0px',
-    opacity: 1,
+    maxWidth: '80%',
+    marginBottom: theme.spacing(4),
     [theme.breakpoints.down('sm')]: {
-        fontSize: '22px', // Adjust the font size for small screens if needed
-        top: '250px', // Adjust positioning for small screens
-        left: '50px',
-        width: 'auto', // Make the width responsive
+        fontSize: '1.2rem',
+        marginBottom: theme.spacing(2),
     },
 }));
 
-export const ClaimButton = styled(Button)(({ theme }) => ({
-    backgroundColor: '#ff4b5c',
-    color: 'white',
-    padding: theme.spacing(1.5, 4),
-    borderRadius: '5px',
-    fontSize: '1rem',
-    '&:hover': {
-        backgroundColor: '#e63946',
-    },
-}));
-
-export const Image = styled('img')(({ theme }) => ({
-    width: '100%',
-    maxWidth: '600px',
-    marginTop: theme.spacing(4),
-    [theme.breakpoints.down('sm')]: {
-        maxWidth: '100%',
-    },
-}));
+// export const ClaimButton = styled(Button)(({ theme }) => ({
+//     backgroundColor: '#ff4b5c',
+//     color: 'white',
+//     padding: theme.spacing(1.5, 4),
+//     borderRadius: '50px',
+//     fontSize: '1rem',
+//     textTransform: 'none',
+//     marginTop: theme.spacing(2),
+//     '&:hover': {
+//         backgroundColor: '#e63946',
+//     },
+// }));
 
 export const FAQSection = styled(Box)(({ theme }) => ({
     marginTop: theme.spacing(6),
+    textAlign: 'center',
 }));
 
 export const FAQItem = styled(Paper)(({ theme }) => ({
