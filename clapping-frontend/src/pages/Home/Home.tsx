@@ -1,7 +1,9 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
-import {  FAQItem, FAQSection, HomeContainer, Section, Subtitle, Title } from '../../components/HomeContainer';
+import {  FAQItem, FAQSection, HomeContainer, LadyImage, Section, Subtitle, Title } from '../../components/HomeContainer';
 import ClaimLink from '../../components/ClaimLink/ClaimLink';
+import lady from '../../assets/images/lady-image/lady.png'
+import ShoutOutRepository, { PolygonComponent } from '../../components/ShoutOut/ShoutOutRepository';
 
 const Home: React.FC = () => {
     return (
@@ -14,12 +16,13 @@ const Home: React.FC = () => {
                     Boost your <br/> career with instant peer recognition for your soft skills.
                 </Subtitle>
                 <ClaimLink />
-                {/* <ClaimButton>Claim Your Brand Link</ClaimButton> */}
+                <LadyImage src={lady} alt="professional"/>
+                {/* <PolygonComponent/>                 */}
             </Section>
-            <FAQSection>
+            {/* <FAQSection>
                 <FAQItem>Why do I need a personal branding link?</FAQItem>
                 <FAQItem>Is it easy to get shoutouts for building my personal brand?</FAQItem>
-            </FAQSection>
+            </FAQSection> */}
         </HomeContainer>
     );
 };

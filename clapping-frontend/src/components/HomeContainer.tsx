@@ -72,6 +72,44 @@ export const Subtitle = styled(Typography)(({ theme }) => ({
 //     },
 // }));
 
+
+
+export const LadyImage = styled('img')(({ theme }) => ({
+    position: 'relative',
+    top: '30px',  // Default for larger screens
+    borderRadius: '50%',  // Ensures the image is circular
+    background: 'transparent no-repeat padding-box',
+    
+    // For medium screens (tablets)
+    [theme.breakpoints.down('md')]: {
+        width: '600px',
+        height: '600px',
+        top: '21px',
+    },
+
+    // For small screens (mobile)
+    [theme.breakpoints.down('sm')]: {
+        width: '90%',  // Adjust the size for small screens
+        height: 'auto',  // Maintain aspect ratio
+        top: '19px', // Adjust top for small screens
+    },
+
+    // For extra small screens
+    [theme.breakpoints.down('xs')]: {
+        width: '80%',
+        top: '200px',
+    },
+
+    // For screens smaller than 599.95px
+    '@media (max-width: 599.95px)': {
+        width: '90%',
+        height: 'auto',
+        top: '19px',
+    },
+}));
+
+
+
 export const FAQSection = styled(Box)(({ theme }) => ({
     marginTop: theme.spacing(6),
     textAlign: 'center',
@@ -84,3 +122,15 @@ export const FAQItem = styled(Paper)(({ theme }) => ({
     borderRadius: '5px',
     boxShadow: theme.shadows[2],
 }));
+
+
+// export const ShoutOutRepository = styled(Box)(({ theme }) => ({
+//     position: 'absolute',      // Assuming you want it to be absolutely positioned
+//     top: '911px',
+//     left: '0.5px',
+//     width: '959px',
+//     height: '671px',
+//     backgroundColor: '#0A2289',
+//     opacity: 1,
+//     // Add other styles here as needed
+// }));
