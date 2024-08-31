@@ -17,7 +17,7 @@ const Home: React.FC = () => {
                 </Subtitle>
                 <ClaimLink />
                 <LadyImage src={lady} alt="professional"/>
-                {/* <PolygonComponent/>                 */}
+                <PolygonComponent/>                
             </Section>
             {/* <FAQSection>
                 <FAQItem>Why do I need a personal branding link?</FAQItem>

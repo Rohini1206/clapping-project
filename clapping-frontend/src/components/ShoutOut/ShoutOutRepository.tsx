@@ -40,34 +40,67 @@ const ImageWrapper = styled(Box)(({ theme }) => ({
 
 export const PolygonComponent = styled(Box)(({ theme }) => ({
     position: 'absolute',
-    top: '881px', // Adjust this value to position it correctly near the lady image
-    left: '50%', // Center it horizontally relative to the lady image
+    top: '881px', // Adjust this value for large screens
+    left: '50%', // Center it horizontally
     transform: 'translateX(-50%)', // Center alignment
     width: '100%',
     height: '100%',
     background: 'transparent',
-    
+
     '&::before': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '50%',
-      height: '100%',
-      backgroundColor: '#0a2289',
-      clipPath: 'polygon(0 0, 100% 22%, 100% 80%, 0% 100%)', // Left side shape
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '50%',
+        height: '100%',
+        backgroundColor: '#0a2289',
+        clipPath: 'polygon(0 0, 100% 22%, 100% 80%, 0% 100%)',
     },
-  
+
     '&::after': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      right: 0,
-      width: '50%',
-      height: '100%',
-      backgroundColor: '#67C6EF',
-      clipPath: 'polygon(0% 22%, 100% 0, 100% 100%, -1% 80%)', // Right side shape
-    }
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        width: '50%',
+        height: '100%',
+        backgroundColor: '#67C6EF',
+        clipPath: 'polygon(0% 22%, 100% 0, 100% 100%, -1% 80%)',
+    },
+
+    // For medium screens (tablets)
+    [theme.breakpoints.down('md')]: {
+        top: '700px', // Adjust top position for medium screens
+        '&::before': {
+            clipPath: 'polygon(0 0, 100% 18%, 100% 82%, 0% 100%)', // Adjust the polygon shape
+        },
+        '&::after': {
+            clipPath: 'polygon(0% 18%, 100% 0, 100% 100%, -1% 82%)', // Adjust the polygon shape
+        },
+    },
+
+    // For small screens (mobile)
+    [theme.breakpoints.down('sm')]: {
+        top: '500px', // Adjust top position for small screens
+        '&::before': {
+            clipPath: 'polygon(0 0, 100% 15%, 100% 85%, 0% 100%)', // Adjust the polygon shape
+        },
+        '&::after': {
+            clipPath: 'polygon(0% 15%, 100% 0, 100% 100%, -1% 85%)', // Adjust the polygon shape
+        },
+    },
+
+    // For extra small screens
+    [theme.breakpoints.down('xs')]: {
+        top: '400px', // Adjust top position for extra small screens
+        '&::before': {
+            clipPath: 'polygon(0 0, 100% 10%, 100% 90%, 0% 100%)', // Adjust the polygon shape
+        },
+        '&::after': {
+            clipPath: 'polygon(0% 10%, 100% 0, 100% 100%, -1% 90%)', // Adjust the polygon shape
+        },
+    },
 }));
 
 
